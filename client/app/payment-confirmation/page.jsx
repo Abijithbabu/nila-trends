@@ -37,10 +37,11 @@ export default function PaymentConfirmation() {
       
       if (response.data.message === 'Payment successful') {
         dispatch(setUserDetails(response.data.user));
-        toast.success("Payment confirmed!");
+        // toast.success("Payment confirmed!");
         localStorage.removeItem('orderDetails');
         // router.push('/order-success'); 
-        router.push('/'); 
+        // router.push('/'); 
+        router.push(`/order-success?orderId=${response.data.orderId}`)
       } else {
         toast.error("Payment not captured.");
         // router.push('/order-failed');

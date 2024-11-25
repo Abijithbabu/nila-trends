@@ -257,7 +257,7 @@ console.log('productDetails?.address?.email',productDetails?.address?.email);
 
 
 
-    res.status(201).json({ user, message: 'Order placed successfully' });
+    res.status(201).json({ user,orderId:orderNumber, message: 'Order placed successfully' });
   } catch (err) {
     console.log(err);
     return res.status(500).json({ message: err?.message ?? 'Something went wrong' })

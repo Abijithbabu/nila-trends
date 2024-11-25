@@ -53,4 +53,4 @@ const FacebookLoginComponent = (props) => {
       </>
    );
 };
-export default FacebookLoginComponent;
+export default FacebookLoginComponent;   

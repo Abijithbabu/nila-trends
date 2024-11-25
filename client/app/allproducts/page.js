@@ -49,7 +49,7 @@ const KurtaSetsListing = () => {
     }
   };
 
-  useEffect(() => {
+  useEffect(() => {     
     fetchProducts();
   }, [page, search, priceRange, selectedDiscount, selectedRatings, selectedCategories,sorting]);
 

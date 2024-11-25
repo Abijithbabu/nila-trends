@@ -226,9 +226,9 @@ function Checkout() {
     });
 
     dispatch(setUserDetails(response.data.user));
-    toast.success('Your order has been placed!')
+    // toast.success('Your order has been placed!')
     setLoadingState(false)
-    router.push('/')
+    router.push(`/order-success?orderId=${response.data.orderId}`)
   };
 
   const handleNetworkPayment = async () => {
@@ -238,7 +238,6 @@ function Checkout() {
         totalPrice: lastTotal,
         currency: 'AED',
         redirectUrl: `${process.env.NEXT_PUBLIC_CLIENT_API}/payment-confirmation`,
-        // redirectUrl: 'https://www.google.co.in', 
       });
 
       if (response.data.orderPaypageUrl) {
